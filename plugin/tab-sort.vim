@@ -1,7 +1,7 @@
 func! CurTabFileName( )
   return fnamemodify(bufname(winbufnr(tabpagewinnr(0))), ':t')
 endfun
-func! TabsSort()
+func! TabSort()
   for i in range(tabpagenr('$'), 1, -1)
     :tabr
     for j in range(1,i-1)
@@ -15,4 +15,4 @@ func! TabsSort()
     endfor
   endfor
 endfun
-command! TabsSort :call TabsSort()
+command! TabSort :call TabSort()
